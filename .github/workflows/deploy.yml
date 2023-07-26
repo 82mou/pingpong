@@ -26,13 +26,13 @@ jobs:
           node-version: "18"
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
       - name: Install dependencies
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn generate
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
 
